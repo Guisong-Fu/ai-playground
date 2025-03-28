@@ -75,16 +75,9 @@ def automate_browser():
         page.click("text=Logga in")
 
         # Wait for the "pop up" or overlay with BankID option
-        # page.wait_for_selector("text=Mobilt BankID", timeout=15000)
-        # page.click("text=Mobilt BankID")
         page.wait_for_selector("text=Fortsätt", timeout=15000)
         page.click("text=Fortsätt")
         
-
-        # Possibly there's a "Bekräfta" or "Fortsätt" button after choosing BankID
-        # Adjust to actual site text:
-        # page.click("text=Bekräfta")
-
         # At this point, the site typically displays the rotating BankID QR code.
         page.wait_for_selector(".qrcode", timeout=20000)  # Wait for QR code container
 

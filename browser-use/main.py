@@ -10,8 +10,12 @@ async def main():
         1. go to  https://fp.trafikverket.se/Boka/ng/
         2. Click on the "Logga in" button
         3. Select "Mobilt BankID" as the authentication method
-        4. Wait for the QR code to appear
-        5. Take a screenshot of the QR code
+        4. wait for me to scan the QR code to authenticate
+        5. Click book test
+        6. choose B96 type of exam
+        7. choose practical driving test
+        8. choose Uppsala as test location
+        9. If there is a slot available in April, print the date and time of the slot
         """,
         llm=ChatOpenAI(model="gpt-4o-mini"),
     )
